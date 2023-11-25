@@ -1,0 +1,18 @@
+# Logs
+logs
+*.log
+*.aes
+cypress/logs
+cypress/fixtures/profile.json
+cypress/fixtures/users.json
+.history
+.DS_Store
+cypress/.DS_Store
+
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+node_modules
+cypress/videos
+cypress/screenshots
+js/*.js
+env

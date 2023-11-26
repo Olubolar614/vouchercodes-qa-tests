@@ -2,9 +2,8 @@
 
 import {Given, Then, When} from "@badeball/cypress-cucumber-preprocessor";
 
-const URL = "https://www.vouchercodes.co.uk/";
 Given(/^I am on the vouchercodes home page$/, () => {
-    cy.visit(URL);
+    cy.visit('/');
 });
 
 When(/^I click the search field$/, function () {
@@ -25,5 +24,5 @@ Then(/^I should see the correct offers$/, function () {
 });
 
 Then(/^I should see an error message$/, function () {
-    cy.get('[data-qa="el:noSearchHeading"]').should('contain.text', 'Sorry, we couldn\'t find any results for "er@t4!".').wait(3000);
+    cy.get('[data-qa="el:noSearchHeading"]').should('contain.text', 'Sorry, we couldn\'t find any results for "er@t4!".').wait(2000);
 });

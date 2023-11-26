@@ -23,7 +23,7 @@ module.exports = defineConfig({
     },
     specPattern: "cypress/e2e/features/*.feature",
     supportFile: "cypress/support/e2e.js",
-    baseUrl: "http://zero.webappsecurity.com",
+    baseUrl: "https://www.vouchercodes.co.uk/",
     execTimeout: 180000,
     pageLoadTimeout: 180000
   },

@@ -11,7 +11,7 @@ When(/^I click the search field$/, function () {
     cy.get("#appSearchPlaceholderInput").click()
 });
 
-When(/^I type valid text in the search field "([^"]*)"$/, (args1) => {
+When(/^I search for local london restaurant offers "([^"]*)"$/, (args1) => {
     cy.get("#appSearchPlaceholderInput").type(args1);
 });
 
@@ -19,8 +19,9 @@ When(/^I type invalid text in the search field "([^"]*)"$/, (args1) => {
     cy.get("#appSearchPlaceholderInput").type(args1);
 });
 
-Then(/^I should see the correct search results$/, function () {
-    cy.get('[data-qa="el:searchMerchantText"]').first().should('have.text', 'Zizzi');
+Then(/^I should see the correct offers$/, function () {
+    cy.get('[data-qa="el:searchOfferTitle"]').as('searchOfferTitle');
+    cy.get('@searchOfferTitle').should('contain.text', 'Selected Accounts: £10 off 2 Selected London Orders Over £25 at Uber Eats');
 });
 
 Then(/^I should see an error message$/, function () {

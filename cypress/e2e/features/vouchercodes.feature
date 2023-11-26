@@ -6,8 +6,8 @@ Feature: Vouchercodes website search
   Scenario: Verify valid search results
     Given I am on the vouchercodes home page
     When I click the search field
-    And I type valid text in the search field "zi"
-    Then I should see the correct search results
+    And I search for local london restaurant offers "london restaurant"
+    Then I should see the correct offers
 
   @invalidsearch
   Scenario: Verify invalid search results
